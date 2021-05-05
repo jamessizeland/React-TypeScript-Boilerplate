@@ -13,9 +13,7 @@
   "search.exclude": {
     ".git": true,
     ".eslintcache": true,
-    "src/dist": true,
-    "src/main.prod.js": true,
-    "src/main.prod.js.map": true,
+    "src/build": true,
     "bower_components": true,
     "dll": true,
     "release": true,
@@ -24,5 +22,8 @@
     "test/**/__snapshots__": true,
     "yarn.lock": true,
     "*.{css,sass,scss}.d.ts": true
-  }
+  },
+  // force format on save to be enabled for this project
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file"
 }
