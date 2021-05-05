@@ -1,3 +1,4 @@
+# styleguide applied to files in this project to maintain a consistency of style with other developers
 root = true
 
 [*]
@@ -10,3 +11,4 @@ insert_final_newline = true
 
 [*.md]
 trim_trailing_whitespace = false
+# indent_size = 1
