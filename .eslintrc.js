@@ -34,10 +34,12 @@ module.exports = {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
   },
+  ignorePatterns: ['/*.*'], // required to stop this file erroring itself
   rules: {
     'arrow-body-style': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'no-unused-vars': 'warn',
+    'react/jsx-one-expression-per-line': 'off',
   },
   overrides: [
     {
