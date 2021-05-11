@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ExampleComponent = (): JSX.Element => {
+const UseStateExampleComponent = (): JSX.Element => {
   const [count, setCount] = useState(0);
 
   return (
@@ -13,4 +13,4 @@ const ExampleComponent = (): JSX.Element => {
   );
 };
 
-export default ExampleComponent;
+export default UseStateExampleComponent;
