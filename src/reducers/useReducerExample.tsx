@@ -22,7 +22,7 @@ const reducer = (state: typeof initialState, action: Actions) => {
   }
 };
 
-const Counter = (): JSX.Element => {
+const UseReducerExample = (): JSX.Element => {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <div>
@@ -33,4 +33,4 @@ const Counter = (): JSX.Element => {
   );
 };
 
-export default Counter;
+export default UseReducerExample;

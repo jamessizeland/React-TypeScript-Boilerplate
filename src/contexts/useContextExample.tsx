@@ -13,9 +13,9 @@ import React, { createContext, Provider } from 'react';
 import { exampleType } from '../types';
 
 export const exampleContext = createContext<exampleType>({
-  counter: 123,
+  counter: Math.random(),
   email: 'example@context.com',
-  indicator: false,
+  indicator: Math.random() > 0.5,
 });
 
 exampleContext.displayName = 'custom text used by ReactDevTools';
@@ -26,7 +26,7 @@ exampleContext.displayName = 'custom text used by ReactDevTools';
   The defaultValue argument is only used when a component does not have a matching Provider above it in the tree. This default value can be helpful for testing components in isolation without wrapping them. Note: passing undefined as a Provider value does not cause consuming components to use defaultValue.
  */
 
-const ExampleProvider: Provider<exampleType> = exampleContext.Provider;
+export const ExampleProvider: Provider<exampleType> = exampleContext.Provider;
 
 /*
   Every Context object comes with a Provider React component that allows consuming components to subscribe to context changes.
