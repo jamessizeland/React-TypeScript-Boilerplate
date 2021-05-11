@@ -1,10 +1,7 @@
 import React, { useContext } from 'react';
 import UseStateExampleComponent from '../../components/useStateExample';
 import UseReducerExample from '../../reducers/useReducerExample';
-import {
-  exampleContext,
-  ExampleProvider,
-} from '../../contexts/useContextExample';
+import { exampleContext } from '../../contexts/useContextExample';
 // import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import style from './App.module.scss'; // css-module import
 

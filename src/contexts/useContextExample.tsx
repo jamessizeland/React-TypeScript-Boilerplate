@@ -9,7 +9,7 @@
 If you only want to avoid passing some props through many levels, component composition is often a simpler solution than context.
 */
 
-import React, { createContext, Provider } from 'react';
+import { createContext, Provider } from 'react';
 import { exampleType } from '../types';
 
 export const exampleContext = createContext<exampleType>({
