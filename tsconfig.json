@@ -26,6 +26,6 @@
     "allowJs": true /* Allow javascript files to be compiled. Useful when migrating JS to TS */,
     "checkJs": true /* Report errors in .js files. Works in tandem with allowJs. */,
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*"], // *** The files TypeScript should type check ***
   "exclude": ["test", "build", "node_modules"] // *** The folders to not type check ***
 }
