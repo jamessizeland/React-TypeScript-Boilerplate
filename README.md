@@ -4,6 +4,8 @@ This project uses [React](https://facebook.github.io/react/), [React Router](htt
 
 It comes with a style guide based on the eslint recommendations and the [airbnb style guide](https://www.npmjs.com/package/eslint-config-airbnb-typescript)
 
+Use the [TypeScript Language Docs](https://www.typescriptlang.org/docs/) and the [TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react#hooks) as well as [this article](https://www.sitepoint.com/react-with-typescript-best-practices/)
+
 ## Getting Started
 
 First, clone the repo via git and install dependencies by running:
