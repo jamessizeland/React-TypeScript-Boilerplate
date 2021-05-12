@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
-import UseStateExampleComponent from '../../components/useStateExample';
+import UseStateExampleComponent from '../../components/UseStateExample';
+import UseEffectExample from '../../components/UseEffectExample';
 import UseReducerExample from '../../reducers/useReducerExample';
 import { exampleContext } from '../../contexts/useContextExample';
 // import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -13,6 +14,7 @@ const App = (): JSX.Element => {
       <p className={style.example}>Hello World from React</p>
       <UseStateExampleComponent />
       <UseReducerExample />
+      <UseEffectExample />
     </div>
   );
 };
