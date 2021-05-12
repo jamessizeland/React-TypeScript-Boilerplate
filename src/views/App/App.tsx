@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import UseStateExampleComponent from '../../components/UseStateExample';
-import UseEffectExample from '../../components/UseEffectExample';
-import UseReducerExample from '../../reducers/useReducerExample';
-import { exampleContext } from '../../contexts/useContextExample';
+import UseStateExampleComponent from '~/components/UseStateExample';
+import UseEffectExample from '~/components/UseEffectExample';
+import { UseReducerExample } from '~/reducers/UseReducerExample';
+import { exampleContext } from '~/contexts/UseContextExample';
 // import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import style from './App.module.scss'; // css-module import
 

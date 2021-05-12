@@ -22,7 +22,7 @@ const reducer = (state: typeof initialState, action: Actions) => {
   }
 };
 
-const UseReducerExample = (): JSX.Element => {
+export const UseReducerExample = (): JSX.Element => {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <div>
@@ -33,4 +33,4 @@ const UseReducerExample = (): JSX.Element => {
   );
 };
 
-export default UseReducerExample;
+export default reducer;

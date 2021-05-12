@@ -124,6 +124,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.jsx'],
+    alias: {
+      '~': path.join(__dirname, '/src'), // absolute imports - required along with tsconfig baseURL and paths
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
