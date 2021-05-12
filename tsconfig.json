@@ -25,6 +25,9 @@
     "resolveJsonModule": true,
     "allowJs": true /* Allow javascript files to be compiled. Useful when migrating JS to TS */,
     "checkJs": true /* Report errors in .js files. Works in tandem with allowJs. */,
+    /* Enable absolute imports */
+    "baseUrl": "src",
+    "paths": { "~/*": ["./*"] }, // required along with alias in webpack module.resolve
   },
   "include": ["src/**/*"], // *** The files TypeScript should type check ***
   "exclude": ["test", "build", "node_modules"] // *** The folders to not type check ***
