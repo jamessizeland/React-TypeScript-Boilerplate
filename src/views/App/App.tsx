@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import UseStateExampleComponent from '~/components/useStateExample';
-import UseEffectExample from '~/components/seEffectExample';
+import UseEffectExample from '~/components/useEffectExample';
 import { UseReducerExample } from '~/reducers/useReducerExample';
 import { exampleContext } from '~/contexts/useContextExample';
 // import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
