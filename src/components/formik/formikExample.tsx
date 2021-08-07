@@ -34,7 +34,8 @@ const FormikExample = () => {
         console.log(values);
         // return errors;
       }}
-      validateOnChange
+      validateOnChange={true}
+      validateOnBlur={false}
     >
       {(props) => (
         <form onSubmit={props.handleSubmit}>
