@@ -3,6 +3,7 @@ import UseStateExampleComponent from '~/components/useStateExample';
 import UseEffectExample from '~/components/useEffectExample';
 import { UseReducerExample } from '~/reducers/useReducerExample';
 import { exampleContext } from '~/contexts/useContextExample';
+import FormikExample from '~/components/formik/formikExample';
 // import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import style from './App.module.scss'; // css-module import
 
@@ -15,6 +16,7 @@ const App = (): JSX.Element => {
       <UseStateExampleComponent />
       <UseReducerExample />
       <UseEffectExample />
+      <FormikExample />
     </div>
   );
 };
