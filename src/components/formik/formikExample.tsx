@@ -1,5 +1,5 @@
 import React from 'react';
-import { Formik } from 'formik';
+import { Formik, Form } from 'formik';
 import FormikInput from './formikInputs';
 
 const config = {
@@ -19,7 +19,7 @@ const config = {
   ],
 };
 
-const FormikExample = () => {
+const FormikExample: React.FC = () => {
   return (
     <Formik
       initialValues={config}
@@ -38,7 +38,7 @@ const FormikExample = () => {
       validateOnBlur={false}
     >
       {(props) => (
-        <form onSubmit={props.handleSubmit}>
+        <Form onSubmit={props.handleSubmit}>
           <FormikInput
             label="ID"
             name="id"
@@ -71,7 +71,7 @@ const FormikExample = () => {
           {/* {props.errors.name && <div id="feedback">{props.errors.name}</div>} */}
           <br />
           <button type="submit">Submit</button>
-        </form>
+        </Form>
       )}
     </Formik>
   );

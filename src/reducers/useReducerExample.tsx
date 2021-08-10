@@ -22,7 +22,7 @@ const reducer = (state: typeof initialState, action: Actions) => {
   }
 };
 
-export const UseReducerExample = (): JSX.Element => {
+export const UseReducerExample: React.FC = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { exampleType } from '../types';
 
-const UseStateExampleComponent = (): JSX.Element => {
+const UseStateExampleComponent: React.FC = () => {
   // the generic is the < >
   // the union is the type | null
   const [simpleCount, setSimpleCount] = useState(0); // implicitly typed

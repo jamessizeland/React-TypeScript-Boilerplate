@@ -32,12 +32,14 @@ type InputType =  // https://www.w3schools.com/tags/tag_input.asp
   | 'url'
   | 'week';
 
-const FormikInput = (
-  props: {
-    label: string;
-    name: string;
-    type: InputType;
-  } & FieldHookConfig<string>,
+interface FormikInput {
+  label: string;
+  name: string;
+  type: InputType;
+}
+
+const FormikInput: React.FC<FormikInput & FieldHookConfig<string>> = (
+  props,
 ) => {
   /**
     useField() returns [formik.getFieldProps(), formik.getFieldMeta()] which we can spread on <input>. We can use field meta to show an error message if the field is invalid and it has been touched (i.e. visited).

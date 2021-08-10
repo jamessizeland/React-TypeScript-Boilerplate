@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const UseEffectExample = (): JSX.Element => {
+const UseEffectExample: React.FC = () => {
   const [random, setRandom] = useState(0);
   const [busy, setBusy] = useState(false);
 

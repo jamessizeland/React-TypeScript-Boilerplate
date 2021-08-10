@@ -10,7 +10,7 @@ If you only want to avoid passing some props through many levels, component comp
 */
 
 import { createContext, Provider } from 'react';
-import reducer from '../reducers/UseReducerExample';
+// import reducer from '../reducers/UseReducerExample';
 import { exampleType } from '../types';
 
 export const exampleContext = createContext<exampleType>({

@@ -7,7 +7,7 @@ import FormikExample from '~/components/formik/formikExample';
 // import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import style from './App.module.scss'; // css-module import
 
-const App = (): JSX.Element => {
+const App: React.FC = () => {
   const data = useContext(exampleContext);
   return (
     <div>
