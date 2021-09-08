@@ -5,7 +5,7 @@ const UseStateExampleComponent = (): JSX.Element => {
   // the generic is the < >
   // the union is the type | null
   const [simpleCount, setSimpleCount] = useState(0); // implicitly typed
-  const [propsCount, setPropsCount] = useState<exampleType | null>(null); //explicitly typed
+  const [propsCount, setPropsCount] = useState<exampleType | null>(null); // explicitly typed
 
   const emailList = ['john@smith.com', 'jill@hill.com', 'queen@example.com'];
 

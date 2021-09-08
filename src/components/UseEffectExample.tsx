@@ -11,7 +11,7 @@ const UseEffectExample = (): JSX.Element => {
     }, 1000);
   }, [random]);
 
-  const randomiser = (multiplier: number = 1): number => {
+  const randomiser = (multiplier = 1): number => {
     /** Pick a random number  */
     return Math.random() * multiplier;
   };
