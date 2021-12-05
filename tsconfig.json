@@ -1,34 +1,24 @@
 {
   "compilerOptions": {
-    "target": "ES2018" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */,
-    "module": "ESNext" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */,
-    "lib": ["DOM", "ESNext", "DOM.Iterable", "ScriptHost"],
+    "target": "ES2018",
+    "module": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext", "ScriptHost"],
     "declaration": true,
     "declarationMap": true,
-    "noEmit": true /* Do not emit outputs. */,
-    "jsx": "react" /* Specify JSX code generation: 'preserve', 'react-native', 'react' or 'react-jsx'. */,
-    "strict": true /* Enable all strict type-checking options. */,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
     "pretty": true,
-    "sourceMap": true,
-    /* Additional Checks */
-    "skipLibCheck": true /* Skip type checking of declaration files. */,
-    "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    /* Module Resolution Options */
-    "moduleResolution": "node" /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */ /* Type declaration files to be included in compilation. */,
-    "isolatedModules": true /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */,
-    "esModuleInterop": true /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
-    "allowJs": true /* Allow javascript files to be compiled. Useful when migrating JS to TS */,
-    "checkJs": true /* Report errors in .js files. Works in tandem with allowJs. */,
-    /* Enable absolute imports */
-    "baseUrl": "./src",
-    "paths": { "~/*": ["./*"] }, // required along with alias in webpack module.resolve
+    "allowJs": true,
+    "noFallthroughCasesInSwitch": true,
+    "isolatedModules": true
   },
-  "include": ["src/**/*"], // *** The files TypeScript should type check ***
-  "exclude": ["test", "build", "node_modules"] // *** The folders to not type check ***
+  "include": ["src/**/*"],
+  "exclude": ["test", "build", "node_modules"]
 }
