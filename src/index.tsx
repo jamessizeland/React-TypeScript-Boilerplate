@@ -9,13 +9,13 @@ import AppRoutes from './routes';
 
 import './style/global.scss';
 
-import { homepage } from '../package.json';
+import pjson from '../package.json';
 
 ReactDOM.render(
   <React.StrictMode>
     <HelmetProvider>
       <Provider store={store}>
-        <BrowserRouter basename={homepage}>
+        <BrowserRouter basename={pjson.homepage}>
           <Layout>
             <AppRoutes />
           </Layout>
