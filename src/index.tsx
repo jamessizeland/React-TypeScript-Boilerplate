@@ -8,6 +8,7 @@ import { Layout } from './components';
 import AppRoutes from './routes';
 
 import './style/global.scss';
+import './style/tailwind.css';
 
 import pjson from '../package.json';
 
