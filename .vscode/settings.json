@@ -1,7 +1,7 @@
 {
   "files.associations": {
     ".babelrc": "jsonc",
-    ".eslintrc": "jsonc",
+    ".eslintrc": "js",
     ".prettierrc": "jsonc",
     ".eslintignore": "ignore"
   },
@@ -26,4 +26,6 @@
   // force format on save to be enabled for this project
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file"
+
+  // "typescript.tsdk": "node_modules\\typescript\\lib"
 }

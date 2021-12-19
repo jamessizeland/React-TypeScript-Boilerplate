@@ -5,7 +5,7 @@ module.exports = {
   trailingComma: 'all', // Print trailing commas wherever possible when multi-line. (A single-line array, for example, never gets trailing commas.)
   jsxSingleQuote: false, // Use single quotes instead of double quotes in JSX.
   singleQuote: true,
-  jsxBracketSameLine: false, //Put the > of a multi-line JSX element at the end of the last line instead of being alone on the next line (does not apply to self closing elements).
   printWidth: 80, // Specify the line length that the printer will wrap on.
   proseWrap: 'preserve', // wrap markdown text as-is since some services use a linebreak-sensitive renderer, e.g. GitHub comment and BitBucket.
+  endOfLine: 'auto',
 };
