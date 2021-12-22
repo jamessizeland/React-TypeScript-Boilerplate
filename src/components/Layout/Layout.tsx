@@ -1,4 +1,6 @@
 import React from 'react';
+import Footer from './Footer/Footer';
+import Header from './Header/Header';
 
 type LayoutProps = {
   children: JSX.Element;
@@ -7,9 +9,9 @@ type LayoutProps = {
 export function Layout({ children }: LayoutProps): JSX.Element {
   return (
     <div>
-      <p>Header</p>
-      {children}
-      <p>Footer</p>
+      <Header />
+      <div className="container min-h-screen">{children}</div>
+      <Footer />
     </div>
   );
 }

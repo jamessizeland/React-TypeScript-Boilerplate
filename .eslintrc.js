@@ -39,5 +39,12 @@ module.exports = {
     'no-unused-vars': 'warn',
     'react/jsx-one-expression-per-line': 'off',
   },
-  // overrides: [],
+  overrides: [
+    {
+      files: ['**/*.stories.*'],
+      rules: {
+        'import/no-anonymous-default-export': 'off',
+      },
+    },
+  ],
 };
