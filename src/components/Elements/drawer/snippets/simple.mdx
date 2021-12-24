@@ -1,0 +1,130 @@
+```jsx
+import React from 'react';
+
+/* You'll need to install @reach/portal which simplify creating portal*/
+import Portal from '@reach/portal';
+
+export const DrawerPage = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <div className="m-8">
+      <button
+        type="button"
+        onClick={toggle}
+        className="text-white focus:outline-none m-1.5 rounded px-6 py-2 font-medium bg-blue-600"
+      >
+        Click to open me
+      </button>
+      <Drawer isOpen={isOpen} toggle={toggle} position="left">
+        <h2 className="px-4 pt-4 text-2xl md:text-3xl font-light">
+          React UI librairies
+        </h2>
+        <ul className="list-disc pl-8 pt-4 text-gray-700">
+          <li className="mb-2">Chakra-UI</li>
+          <li className="mb-2">MDBootstrap</li>
+          <li className="mb-2">React-bootstrap</li>
+          <li className="mb-2">Material UI</li>
+          <li className="mb-2">Supabase UI</li>
+          <li className="mb-2">Ant Design</li>
+          <li className="mb-2">ReactStrap</li>
+          <li>React Suite</li>
+        </ul>
+      </Drawer>
+    </div>
+  );
+};
+
+/* Logic */
+
+const style = {
+  animation: {
+    left: 'animate-drawer-left',
+  },
+  orientation: {
+    left: `flex w-8/12 md:w-80 lg:w-96 h-full left-0 mx-0 my-0 absolute focus:outline-none `,
+  },
+  body: `flex-shrink flex-grow p-4`,
+  headerTitle: `text-2xl md:text-3xl font-light`,
+  content: `relative flex flex-col bg-white pointer-events-auto`,
+  header: `items-start justify-between p-4 border-b border-gray-300`,
+  container: `fixed top-0 left-0 z-40 w-full h-full m-0 overflow-hidden`,
+  overlay: `fixed top-0 left-0 z-30 w-screen h-screen bg-black opacity-50`,
+  footer: `flex flex-wrap items-center justify-end p-3 border-t border-gray-300`,
+};
+
+function Drawer({ children, isOpen, toggle }) {
+  const ref = React.useRef(null);
+
+  // close drawer on click outside
+  React.useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (!ref.current?.contains(event.target)) {
+        if (!isOpen) return;
+        toggle(false);
+      }
+    };
+    window.addEventListener('click', handleOutsideClick);
+    return () => window.removeEventListener('click', handleOutsideClick);
+  }, [isOpen, ref, toggle]);
+
+  // close drawer when you click on "ESC" key
+  React.useEffect(() => {
+    const handleEscape = (event) => {
+      if (!isOpen) return;
+
+      if (event.key === 'Escape') {
+        toggle(false);
+      }
+    };
+    document.addEventListener('keyup', handleEscape);
+    return () => document.removeEventListener('keyup', handleEscape);
+  }, [isOpen, toggle]);
+
+  // hide scrollbar and prevent body from moving when drawer is open
+  //put focus on drawer dialogue
+  React.useEffect(() => {
+    if (!isOpen) return;
+
+    ref.current?.focus();
+
+    const html = document.documentElement;
+    const scrollbarWidth = window.innerWidth - html.clientWidth;
+
+    html.style.overflow = 'hidden';
+    html.style.paddingRight = `${scrollbarWidth}px`;
+
+    return () => {
+      html.style.overflow = '';
+      html.style.paddingRight = '';
+    };
+  }, [isOpen]);
+
+  return (
+    <Portal>
+      {isOpen && (
+        <>
+          <div className={style.overlay} />
+          <div className={style.container}>
+            <div
+              aria-modal={true}
+              className={style.orientation.left}
+              ref={ref}
+              role="dialogue"
+              tabIndex={-1}
+            >
+              <div className={`${style.animation.left} ${style.content}`}>
+                {children}
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+    </Portal>
+  );
+}
+```
