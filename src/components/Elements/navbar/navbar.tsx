@@ -65,6 +65,7 @@ function Navbar({ children, className }: INavbarProps) {
     if (window.innerWidth > 1024) {
       setOpen((prevState) => !prevState);
     }
+    console.log('windown width :', window.innerWidth);
   }, []);
 
   // close navbar on click outside when viewport is less than 1024px

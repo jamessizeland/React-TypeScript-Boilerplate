@@ -1,12 +1,6 @@
 import React from 'react';
-import {
-  Modal,
-  ModalBody,
-  ModalHeader,
-  ModalFooter,
-  Button,
-  useToggle,
-} from '../../';
+import { Modal, ModalBody, ModalHeader, ModalFooter, Button } from '../../';
+import { useToggle } from 'hooks';
 
 const ModalDefault = (): JSX.Element => {
   const { toggle, isOpen } = useToggle();

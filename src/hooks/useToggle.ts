@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const useToggle = () => {
+const useToggle = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggle = () => {
@@ -8,3 +8,5 @@ export const useToggle = () => {
   };
   return { toggle, isOpen };
 };
+
+export default useToggle;

@@ -1,7 +1,6 @@
 /**
  * Export all the Atomic Elements from here to be used in the rest of the project
  */
-export * from './_utils/useToggle';
 export * from './accordion/accordion';
 export * from './autocomplete/autocomplete';
 export * from './button/button';
@@ -22,4 +21,3 @@ export * from './scroll-indicator/scrollIndicator';
 export * from './sidenav/sidenav';
 export * from './spinner/spinner';
 export * from './tooltip/tooltip';
-export * from './useClipboard/useClipboard';
