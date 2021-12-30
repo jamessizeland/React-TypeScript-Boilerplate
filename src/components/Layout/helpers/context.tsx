@@ -37,6 +37,7 @@ function LayoutProvider({ children }: { children: ReactNode }) {
   };
 
   // close side navigation on mobile when route starts changing
+  //! I don't know how to make this work yet in Create-React-App
   // useEffect(() => {
   //   if (open) {
   //     document.documentElement.style.overflow = 'hidden';

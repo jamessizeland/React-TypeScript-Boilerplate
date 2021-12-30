@@ -27,73 +27,49 @@ interface INavbarBrandProps extends Props {
 }
 
 interface INavbarNavProps extends Props {
-  orientation?: 'start' | 'middle' | 'end';
+  position?: 'left' | 'center' | 'right';
 }
 
 interface INavbarLinkProps extends INavbarBrandProps {
   active?: boolean;
   activeClass?: string;
+  external?: boolean;
 }
 
 const style = {
-  navbar: `relative px-4 py-2 shadow top-0 w-full lg:flex lg:flex-row lg:items-center lg:justify-start lg:relative`,
-  brand: `cursor-pointer font-bold inline-block mr-4 py-1.5 text-2xl whitespace-nowrap hover:text-gray-200`,
-  toggler: `block float-right text-4xl lg:hidden focus:outline-none focus:shadow`,
-  item: `whitespace-pre cursor-pointer px-4 py-3 hover:text-gray-200`,
+  // navbar: `relative px-4 py-2 shadow top-0 w-full lg:flex lg:flex-row lg:items-center lg:justify-start lg:relative`,
+  navbar: 'font-light h-16 relative flex items-center flex-row justify-start',
+  // brand: `cursor-pointer font-bold inline-block mr-4 py-1.5 text-2xl whitespace-nowrap hover:text-gray-200`,
+  brand: `inline-block cursor-pointer pl-1`,
+  active: `text-purple-800`,
+  // toggler: `block float-right text-4xl lg:hidden focus:outline-none focus:shadow`,
+  toggler: `ml-auto flex lg:hidden pr-3 text-5xl focus:outline-none focus:shadow px-2`,
+  // item: `whitespace-pre cursor-pointer px-4 py-3 hover:text-gray-200`,
   collapse: {
     default: `border-t border-gray-500 fixed left-0 mt-2 shadow py-2 text-center lg:border-none lg:flex lg:flex-grow lg:items-center lg:mt-0 lg:py-0 lg:relative lg:shadow-none`,
     open: `h-auto visible transition-all duration-500 ease-out w-full opacity-100 lg:transition-none`,
     close: `h-auto invisible w-0 transition-all duration-300 ease-in lg:opacity-100 lg:transition-none lg:visible`,
   },
-  nav: {
-    start: `block mb-0 mr-auto pl-0 lg:flex lg:mb-0 lg:pl-0`,
-    middle: `block mb-0 ml-auto pl-0 lg:flex lg:pl-0 lg:mb-0 lg:mx-auto`,
-    end: `block pl-0 mb-0 ml-auto lg:flex lg:pl-0 lg:mb-0`,
+  // nav: {
+  //   start: `block mb-0 mr-auto pl-0 lg:flex lg:mb-0 lg:pl-0`,
+  //   middle: `block mb-0 ml-auto pl-0 lg:flex lg:pl-0 lg:mb-0 lg:mx-auto`,
+  //   end: `block pl-0 mb-0 ml-auto lg:flex lg:pl-0 lg:mb-0`,
+  // },
+  link: `cursor-pointer px-4 text-gray-900 hover:text-black font-medium`,
+  position: {
+    center: `flex pl-0 mb-0 mx-auto pr-8 lg:hidden`,
+    left: `hidden lg:pl-0 lg:mb-0 lg:mr-auto md:flex`,
+    right: `hidden lg:pl-0 lg:mb-0 lg:ml-auto lg:flex`,
   },
 };
 
 const Context = createContext<INavbarContextProps>({});
 
 function Navbar({ children, className }: INavbarProps) {
-  const [open, setOpen] = useState(false);
-  const navbarRef = useRef<HTMLDivElement>(null);
-
-  // this is done intentionally to prevent nav-items to show up.
-  // when viewport is less than 1024px, the navbar will be fixed and be positioned to the top
-  // because of that, we can't show navbar toggle on website to prevent all navbar examples to be display on the same position.
-  const toggle = useCallback(() => {
-    if (window.innerWidth > 1024) {
-      setOpen((prevState) => !prevState);
-    }
-    console.log('windown width :', window.innerWidth);
-  }, []);
-
-  // close navbar on click outside when viewport is less than 1024px
-  useEffect(() => {
-    const handleOutsideClick = (event: MouseEvent) => {
-      if (window.innerWidth < 1024) {
-        if (!navbarRef.current?.contains(event.target as Node)) {
-          if (!open) return;
-          setOpen(false);
-        }
-      }
-    };
-    window.addEventListener('click', handleOutsideClick);
-    return () => window.removeEventListener('click', handleOutsideClick);
-  }, [open, navbarRef]);
-
-  return (
-    <Context.Provider value={{ open, toggle }}>
-      <nav ref={navbarRef} className={clsx(className, style.navbar)}>
-        {children}
-      </nav>
-    </Context.Provider>
-  );
+  return <nav className={clsx(className, style.navbar)}>{children}</nav>;
 }
 
-const useToggle = () => useContext(Context);
-
-/* You can wrap the a tag with Link and pass href to Link if you are using either Create-React-App, Next.js or Gatsby */
+// ! You can wrap the a tag with Link and pass href to Link if you are using either Create-React-App, Next.js or Gatsby
 function NavbarBrand({ children, href }: INavbarBrandProps) {
   return (
     <a href={href} className={style.brand}>
@@ -102,13 +78,12 @@ function NavbarBrand({ children, href }: INavbarBrandProps) {
   );
 }
 
-function NavbarToggler() {
-  const { toggle } = useToggle();
+function NavbarToggler({ toggle }: { toggle: () => void }) {
   return (
     <button
-      type="button"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
+      // type="button"
+      // aria-expanded="false"
+      // aria-label="Toggle navigation"
       className={style.toggler}
       onClick={toggle}
     >
@@ -116,6 +91,8 @@ function NavbarToggler() {
     </button>
   );
 }
+
+const useToggle = () => useContext(Context);
 
 function NavbarCollapse({ children }: Props) {
   const { open } = useToggle();
@@ -130,20 +107,34 @@ function NavbarCollapse({ children }: Props) {
   );
 }
 
-function NavbarNav({ children, orientation = 'start' }: INavbarNavProps) {
-  return <ul className={style.nav[orientation]}>{children}</ul>;
+function NavbarNav({ children, position = 'right' }: INavbarNavProps) {
+  return <ul className={style.position[position]}>{children}</ul>;
 }
 
 function NavbarItem({ children }: Props) {
-  return <li className={style.item}>{children}</li>;
+  return <li>{children}</li>;
 }
 
-/* You can wrap the a tag with Link and pass href to Link if you are using either Create-React-App, Next.js or Gatsby */
-function NavbarLink({ children, href, active, activeClass }: INavbarLinkProps) {
+//! You can wrap the a tag with Link and pass href to Link if you are using either Create-React-App, Next.js or Gatsby
+function NavbarLink({
+  children,
+  href,
+  active,
+  external,
+  ...props
+}: INavbarLinkProps) {
   return (
-    <a href={href} className={active ? activeClass : ''}>
-      {children}
-    </a>
+    <div className={style.link}>
+      {external ? (
+        <a className="flex" {...props} href={href}>
+          {children}
+        </a>
+      ) : (
+        <a href={href} className="flex" {...props}>
+          {children}
+        </a>
+      )}
+    </div>
   );
 }
 

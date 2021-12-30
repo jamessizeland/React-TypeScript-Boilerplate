@@ -19,14 +19,14 @@ const NavbarVariantThree = (): JSX.Element => (
           className="w-9 h-9"
         />
       </NavbarBrand>
-      <NavbarToggler />
+      <NavbarToggler toggle={() => console.log('toggled')} />
       <NavbarCollapse>
-        <NavbarNav orientation="start">
+        <NavbarNav position="left">
           <NavbarItem>
             <NavbarLink href="#">Documentation</NavbarLink>
           </NavbarItem>
         </NavbarNav>
-        <NavbarNav orientation="end">
+        <NavbarNav position="right">
           <NavbarItem>
             <NavbarLink href="#">Deployment</NavbarLink>
           </NavbarItem>

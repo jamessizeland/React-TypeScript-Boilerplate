@@ -1,21 +1,23 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  darkMode: false,
   theme: {
     extend: {
       colors: {
-        primary: {
-          'dark-blue': 'hsl(233, 26%, 24%)',
-          'lime-green': 'hsl(136, 65%, 51%)',
-          'bright-cyan': 'hsl(192, 70%, 51%)',
-        },
-        neutral: {
-          'grayish-blue': 'hsl(233, 8%, 62%)',
-          'light-grayish-blue': 'hsl(220, 16%, 96%)',
-          'very-light-gray': 'hsl(0, 0%, 98%)',
-          white: 'hsl(0, 0%, 100%)',
-        },
+        transparent: 'transparent',
+        current: 'currentColor',
+        black: colors.black,
+        white: colors.white,
+        gray: colors.trueGray,
+        indigo: colors.indigo,
+        red: colors.rose,
+        yellow: colors.amber,
+        blue: colors.sky,
+        primary: '#9b59b6',
+        secondary: '#1abc9c',
       },
       animation: {
         modal: 'modal 0.5s',
@@ -52,5 +54,6 @@ module.exports = {
       },
     },
   },
+  variants: {},
   plugins: [],
 };

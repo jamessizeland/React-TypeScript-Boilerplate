@@ -29,9 +29,9 @@ const NavbarVariantOne = (): JSX.Element => (
           />
         </svg>
       </NavbarBrand>
-      <NavbarToggler />
+      <NavbarToggler toggle={() => console.log('toggled')} />
       <NavbarCollapse>
-        <NavbarNav orientation="start">
+        <NavbarNav position="left">
           <NavbarItem>
             <NavbarLink href="#">Get Started</NavbarLink>
           </NavbarItem>
@@ -39,7 +39,7 @@ const NavbarVariantOne = (): JSX.Element => (
             <NavbarLink href="#">Core Concepts</NavbarLink>
           </NavbarItem>
         </NavbarNav>
-        <NavbarNav orientation="end">
+        <NavbarNav position="right">
           <NavbarItem>
             <NavbarLink href="#">Base Styles</NavbarLink>
           </NavbarItem>
