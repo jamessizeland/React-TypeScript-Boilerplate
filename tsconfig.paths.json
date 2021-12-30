@@ -1,10 +1,15 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@Elements": ["./src/components/Elements/"],
-      "@Types": ["./src/types/"]
-    }
+    "baseUrl": "src"
+    // "paths": {
+    //   "@/*": ["./src/*"],
+    //   "@/Elements/*": ["./src/components/Elements/*"],
+    //   "@/types/*": ["./src/types/*"],
+    //   "@/hooks/*": ["./src/hooks/*"],
+    //   "@/utils/*": ["./src/utils/*"],
+    //   "@/routes/*": ["./src/routes/*"],
+    //   "@/services/*": ["./src/services/*"],
+    //   "@/store/*": ["./src/store/*"],
+    // }
   }
 }
