@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code } from '../../';
+import { Code } from '../..';
 
 const BlueOutlineCode = (): JSX.Element => (
   <div className="mb-12">

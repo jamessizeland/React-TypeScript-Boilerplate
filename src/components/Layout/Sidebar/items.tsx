@@ -1,5 +1,5 @@
 import React from 'react';
-import { routes } from '../../../routes';
+import { routes } from 'Routes';
 
 const style = {
   link: `flex font-medium items-center justify-start my-1 p-3 text-sm w-full lg:hover:text-purple-800`,

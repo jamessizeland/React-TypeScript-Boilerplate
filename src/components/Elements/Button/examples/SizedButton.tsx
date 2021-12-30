@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '../../';
+import { Button } from '../..';
 
 const SizedButtons = (): JSX.Element => (
   <div className="mb-12">

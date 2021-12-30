@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sidenav, SidenavItem, Button } from '../../';
+import { Sidenav, SidenavItem, Button } from '../..';
 
 const SidenavRight = (): JSX.Element => {
   const [open, setOpen] = useState<boolean>(false);

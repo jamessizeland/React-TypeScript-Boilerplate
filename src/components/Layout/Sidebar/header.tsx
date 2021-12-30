@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../../assets/logo.svg';
+import logo from 'Assets/logo.svg';
 
 const SidenavHeader = () => (
   <div className="top-0 flex mb-4 pl-4 bg-white lg:hidden">

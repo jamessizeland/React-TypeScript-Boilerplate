@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollIndicator } from '../../';
+import { ScrollIndicator } from '../..';
 
 const ScrollIndicatorExample = (): JSX.Element => (
   <ScrollIndicator>

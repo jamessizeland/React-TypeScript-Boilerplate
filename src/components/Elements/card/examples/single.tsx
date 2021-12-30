@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, CardText, CardTitle } from '../../';
+import { Card, CardBody, CardText, CardTitle } from '../..';
 
 const SingleCard = (): JSX.Element => (
   <div className="mb-12">

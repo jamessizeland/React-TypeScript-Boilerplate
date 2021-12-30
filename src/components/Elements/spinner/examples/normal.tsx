@@ -1,5 +1,5 @@
 import React from 'react';
-import { Spinner } from '../../';
+import { Spinner } from '../..';
 
 const SpinnerComponent = (): JSX.Element => (
   <div className="mb-8">

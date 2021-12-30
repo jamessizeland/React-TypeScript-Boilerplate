@@ -1,5 +1,5 @@
 import React from 'react';
-import { Jumbotron } from '../../';
+import { Jumbotron } from '../..';
 
 const JumbotronWithBackgroundComponent = (): JSX.Element => (
   <div>

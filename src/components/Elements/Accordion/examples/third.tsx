@@ -1,5 +1,5 @@
 import React from 'react';
-import { Accordion, AccordionItem, AccordionPanel } from '../../';
+import { Accordion, AccordionItem, AccordionPanel } from '../..';
 
 export default function AccordionThirdExample() {
   return (

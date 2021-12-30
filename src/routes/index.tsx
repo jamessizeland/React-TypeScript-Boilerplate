@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { HomePage } from '../pages';
-import { checkEnv } from '../utils';
+import { HomePage } from 'Pages';
+import { checkEnv } from 'Utils';
 
 type RouteType = {
   title: string;

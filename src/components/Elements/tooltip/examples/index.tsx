@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tooltip } from '../../';
+import { Tooltip } from '../..';
 
 const TooltipComponent = (): JSX.Element => (
   <div className="flex justify-center md:justify-start">

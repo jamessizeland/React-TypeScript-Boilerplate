@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Provider } from 'react-redux';
-import { store } from './store/store';
-import { Layout } from './components';
-import AppRoutes from './routes';
+import { store } from 'Store/store';
+import { Layout } from 'Components';
+import AppRoutes from './Routes';
 
-import './style/global.scss';
-import './style/tailwind.css';
+import './Style/global.scss';
+import './Style/tailwind.css';
 
 import pjson from '../package.json';
 

@@ -6,7 +6,7 @@ import {
   NavbarItem,
   NavbarLink,
   NavbarToggler,
-} from '../../';
+} from '../..';
 
 const NavbarVariantThree = (): JSX.Element => (
   <div className="mb-8">

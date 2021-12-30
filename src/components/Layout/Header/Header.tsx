@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import clsx from 'clsx';
 import {
   Navbar,
@@ -10,41 +10,15 @@ import {
 } from '../../Elements';
 import { useToggle } from '../helpers/context';
 import Logo from '../Logo';
-import { routes } from 'routes';
-import { useScrollDirection } from '../../../hooks';
+import { routes } from 'Routes';
+import { useScrollDirection } from 'Hooks';
 
-interface HeaderProps {
-  isHome: boolean;
-}
-
-function Header({ isHome }: HeaderProps): JSX.Element {
+function Header(): JSX.Element {
   const { toggle } = useToggle();
-
-  const [isMounted, setIsMounted] = useState(!isHome);
   const scrollDirection = useScrollDirection({
-    initialDirection: 'up',
-    thresholdPixels: 20,
+    initialDirection: 'up', // this is so the navbar is present on page load
+    thresholdPixels: 50,
   });
-  const [scrolledToTop, setScrolledToTop] = useState(true);
-
-  const handleScroll = () => setScrolledToTop(window.pageYOffset < 50);
-
-  useEffect(() => {
-    // if (prefersReducedMotion) {
-    //   return;
-    // }
-
-    const timeout = setTimeout(() => {
-      setIsMounted(true);
-    }, 100);
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      clearTimeout(timeout);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   useEffect(() => {
     console.log(scrollDirection);
@@ -55,7 +29,7 @@ function Header({ isHome }: HeaderProps): JSX.Element {
       className={clsx(
         scrollDirection === 'up' ? 'translate-y-0' : '-translate-y-20',
         'transition ease-in-out duration-500',
-        'z absolute z-10 top-0 w-full font-inter bg-white lg:fixed lg:px-container',
+        'z fixed z-10 top-0 w-full font-inter bg-white lg:fixed lg:px-container',
       )}
     >
       <Navbar className={clsx('text-white bg-primary')}>

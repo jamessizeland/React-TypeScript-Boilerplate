@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dropdown, DropdownMenu, DropdownToggle, DropdownItem } from '../../';
+import { Dropdown, DropdownMenu, DropdownToggle, DropdownItem } from '../..';
 
 const BasicDropdown = (): JSX.Element => (
   <div className="mb-8">
