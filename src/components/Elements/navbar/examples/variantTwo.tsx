@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Navbar,
   NavbarBrand,
-  NavbarCollapse,
   NavbarNav,
   NavbarItem,
   NavbarLink,
@@ -22,34 +21,32 @@ const NavbarVariantTwo = (): JSX.Element => (
         </svg>
       </NavbarBrand>
       <NavbarToggler toggle={() => console.log('toggled')} />
-      <NavbarCollapse>
-        <NavbarNav position="left">
-          <NavbarItem>
-            <NavbarLink href="#" active={true} activeClass="text-blue-500">
-              Organisation
-            </NavbarLink>
-          </NavbarItem>
-          <NavbarItem>
-            <NavbarLink href="#">Issues</NavbarLink>
-          </NavbarItem>
-        </NavbarNav>
-        <NavbarNav position="center">
-          <NavbarItem>
-            <NavbarLink href="#">Pull Requests</NavbarLink>
-          </NavbarItem>
-          <NavbarItem>
-            <NavbarLink href="#">Issues</NavbarLink>
-          </NavbarItem>
-        </NavbarNav>
-        <NavbarNav position="right">
-          <NavbarItem>
-            <NavbarLink href="#">Market Place</NavbarLink>
-          </NavbarItem>
-          <NavbarItem>
-            <NavbarLink href="#">Explore</NavbarLink>
-          </NavbarItem>
-        </NavbarNav>
-      </NavbarCollapse>
+      <NavbarNav position="left">
+        <NavbarItem>
+          <NavbarLink href="#" active={true} activeClass="text-blue-500">
+            Organisation
+          </NavbarLink>
+        </NavbarItem>
+        <NavbarItem>
+          <NavbarLink href="#">Issues</NavbarLink>
+        </NavbarItem>
+      </NavbarNav>
+      <NavbarNav position="center">
+        <NavbarItem>
+          <NavbarLink href="#">Pull Requests</NavbarLink>
+        </NavbarItem>
+        <NavbarItem>
+          <NavbarLink href="#">Issues</NavbarLink>
+        </NavbarItem>
+      </NavbarNav>
+      <NavbarNav position="right">
+        <NavbarItem>
+          <NavbarLink href="#">Market Place</NavbarLink>
+        </NavbarItem>
+        <NavbarItem>
+          <NavbarLink href="#">Explore</NavbarLink>
+        </NavbarItem>
+      </NavbarNav>
     </Navbar>
   </div>
 );

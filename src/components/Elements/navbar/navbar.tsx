@@ -1,21 +1,8 @@
-import React, {
-  ReactNode,
-  useEffect,
-  useRef,
-  createContext,
-  useContext,
-  useState,
-  useCallback,
-} from 'react';
+import React, { ReactNode } from 'react';
 import clsx from 'clsx';
 
 interface Props {
   children: ReactNode;
-}
-
-interface INavbarContextProps {
-  open?: boolean;
-  toggle?: () => void;
 }
 
 interface INavbarProps extends Props {
@@ -37,24 +24,10 @@ interface INavbarLinkProps extends INavbarBrandProps {
 }
 
 const style = {
-  // navbar: `relative px-4 py-2 shadow top-0 w-full lg:flex lg:flex-row lg:items-center lg:justify-start lg:relative`,
   navbar: 'font-light h-16 relative flex items-center flex-row justify-start',
-  // brand: `cursor-pointer font-bold inline-block mr-4 py-1.5 text-2xl whitespace-nowrap hover:text-gray-200`,
   brand: `inline-block cursor-pointer pl-1`,
   active: `text-purple-800`,
-  // toggler: `block float-right text-4xl lg:hidden focus:outline-none focus:shadow`,
   toggler: `ml-auto flex lg:hidden pr-3 text-5xl focus:outline-none focus:shadow px-2`,
-  // item: `whitespace-pre cursor-pointer px-4 py-3 hover:text-gray-200`,
-  collapse: {
-    default: `border-t border-gray-500 fixed left-0 mt-2 shadow py-2 text-center lg:border-none lg:flex lg:flex-grow lg:items-center lg:mt-0 lg:py-0 lg:relative lg:shadow-none`,
-    open: `h-auto visible transition-all duration-500 ease-out w-full opacity-100 lg:transition-none`,
-    close: `h-auto invisible w-0 transition-all duration-300 ease-in lg:opacity-100 lg:transition-none lg:visible`,
-  },
-  // nav: {
-  //   start: `block mb-0 mr-auto pl-0 lg:flex lg:mb-0 lg:pl-0`,
-  //   middle: `block mb-0 ml-auto pl-0 lg:flex lg:pl-0 lg:mb-0 lg:mx-auto`,
-  //   end: `block pl-0 mb-0 ml-auto lg:flex lg:pl-0 lg:mb-0`,
-  // },
   link: `cursor-pointer px-4 text-gray-900 hover:text-black font-medium`,
   position: {
     center: `flex pl-0 mb-0 mx-auto pr-8 lg:hidden`,
@@ -62,8 +35,6 @@ const style = {
     right: `hidden lg:pl-0 lg:mb-0 lg:ml-auto lg:flex`,
   },
 };
-
-const Context = createContext<INavbarContextProps>({});
 
 function Navbar({ children, className }: INavbarProps) {
   return <nav className={clsx(className, style.navbar)}>{children}</nav>;
@@ -89,21 +60,6 @@ function NavbarToggler({ toggle }: { toggle: () => void }) {
     >
       &#8801;
     </button>
-  );
-}
-
-const useToggle = () => useContext(Context);
-
-function NavbarCollapse({ children }: Props) {
-  const { open } = useToggle();
-  return (
-    <div
-      style={{ backgroundColor: 'inherit' }}
-      className={`${style.collapse.default}
-        ${open ? style.collapse.open : style.collapse.close}`}
-    >
-      {children}
-    </div>
   );
 }
 
@@ -141,7 +97,6 @@ function NavbarLink({
 export {
   Navbar,
   NavbarBrand,
-  NavbarCollapse,
   NavbarNav,
   NavbarItem,
   NavbarLink,

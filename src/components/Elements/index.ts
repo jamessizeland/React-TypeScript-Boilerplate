@@ -21,3 +21,4 @@ export * from './scroll-indicator/scrollIndicator';
 export * from './sidenav/sidenav';
 export * from './spinner/spinner';
 export * from './tooltip/tooltip';
+export * from './icon/icon';

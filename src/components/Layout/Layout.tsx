@@ -14,7 +14,7 @@ export function Layout({ children }: LayoutProps): JSX.Element {
     <LayoutProvider>
       <div className="flex font-body items-start">
         <Overlay />
-        <Header />
+        <Header isHome />
         <div className="lg:hidden">
           <SideNav />
         </div>
