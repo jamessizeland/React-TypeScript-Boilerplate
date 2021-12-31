@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, CardTitle, CardText } from '../../';
+import { Card, CardBody, CardTitle, CardText } from '../..';
 
 const ArrowIcon = () => (
   <svg

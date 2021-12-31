@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { Field } from '../../';
+import { Field } from '../..';
 
 type FormInputs = {
   email: string;

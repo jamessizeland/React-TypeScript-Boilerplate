@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Autocomplete } from '../../';
+import { Autocomplete } from '../..';
 
 // import example data
 import data from './data.json';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListGroup, ListGroupItem } from '../../';
+import { ListGroup, ListGroupItem } from '../..';
 
 const ListGroupComponent = (): JSX.Element => (
   <div className="mb-12">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Field, LockIcon } from '../../';
+import { Field, LockIcon } from '../..';
 
 const DefaultFieldExample = () => (
   <div className="mt-16">

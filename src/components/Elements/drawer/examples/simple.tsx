@@ -1,6 +1,6 @@
 import React from 'react';
-import { Drawer, Button } from '../../';
-import { useToggle } from 'hooks/';
+import { Drawer, Button } from '../..';
+import { useToggle } from 'Hooks';
 
 const DrawerSimple = (): JSX.Element => {
   const { toggle, isOpen } = useToggle();

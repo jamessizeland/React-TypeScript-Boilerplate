@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Portal from '@reach/portal';
+import clsx from 'clsx';
 
 interface Props {
   children: React.ReactNode;
@@ -14,7 +15,7 @@ interface DrawerProps extends Props {
 const style = {
   body: `flex-shrink flex-grow p-4`,
   headerTitle: `text-2xl md:text-3xl font-light`,
-  content: `relative flex flex-col bg-white pointer-events-auto`,
+  content: `relative flex flex-col bg-white pointer-events-auto w-full`,
   header: `items-start justify-between p-4 border-b border-gray-300`,
   container: `fixed top-0 left-0 z-40 w-full h-full m-0 overflow-hidden`,
   overlay: `fixed top-0 left-0 z-30 w-screen h-screen bg-black opacity-50`,
@@ -91,11 +92,11 @@ function Drawer({ children, isOpen, toggle, position = 'left' }: DrawerProps) {
             <div
               ref={ref}
               tabIndex={-1}
-              role="dialogue"
+              role="alertdialog"
               aria-modal={true}
               className={style.orientation[position]}
             >
-              <div className={`${style.animation[position]} ${style.content}`}>
+              <div className={clsx(style.animation[position], style.content)}>
                 {children}
               </div>
             </div>

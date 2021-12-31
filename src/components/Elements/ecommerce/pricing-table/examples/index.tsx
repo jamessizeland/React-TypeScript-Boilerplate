@@ -1,5 +1,5 @@
 import React from 'react';
-import { Price, CheckIcon, CloseIcon } from '../../../';
+import { Price, CheckIcon, CloseIcon } from '../../..';
 
 const PricingTableExample = (): JSX.Element => (
   <Price>

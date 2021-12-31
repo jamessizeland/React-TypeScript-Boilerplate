@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Collapse } from '../../';
+import { Button, Collapse } from '../..';
 
 const CollapseFirst = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);

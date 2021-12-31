@@ -5,7 +5,7 @@ import {
   DropdownToggle,
   DropdownItem,
   DropdownDivider,
-} from '../../';
+} from '../..';
 
 const DropdownWithDivider = (): JSX.Element => (
   <div className="mb-8">

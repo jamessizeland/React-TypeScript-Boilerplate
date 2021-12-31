@@ -6,7 +6,7 @@
   "description": "building a solid foundation for projects",
   "main": "src/index.tsx",
   "repository": "https://github.com/jamessizeland/React-Typescript-Boilerplate",
-  "author": "James Sizeland <jamessizeland@gmail.com>",
+  "author": {"name": "James Sizeland", "email": "jamessizeland@gmail.com"},
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { Field, LockIcon } from '../../';
+import { Field, LockIcon } from '../..';
 
 /* Yup validation schema*/
 const validateSchema = Yup.object().shape({

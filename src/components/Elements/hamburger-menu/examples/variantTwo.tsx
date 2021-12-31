@@ -7,7 +7,7 @@ import {
   HamburgerMenuNav,
   HamburgerMenuItem,
   HamburgerMenuLink,
-} from '../../';
+} from '../..';
 
 const HamburgerMenuVariantTwo = (): JSX.Element => {
   const [open, setOpen] = useState<boolean>(false);

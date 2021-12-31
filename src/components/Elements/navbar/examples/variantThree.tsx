@@ -2,12 +2,11 @@ import React from 'react';
 import {
   Navbar,
   NavbarBrand,
-  NavbarCollapse,
   NavbarNav,
   NavbarItem,
   NavbarLink,
   NavbarToggler,
-} from '../../';
+} from '../..';
 
 const NavbarVariantThree = (): JSX.Element => (
   <div className="mb-8">
@@ -20,24 +19,22 @@ const NavbarVariantThree = (): JSX.Element => (
         />
       </NavbarBrand>
       <NavbarToggler toggle={() => console.log('toggled')} />
-      <NavbarCollapse>
-        <NavbarNav position="left">
-          <NavbarItem>
-            <NavbarLink href="#">Documentation</NavbarLink>
-          </NavbarItem>
-        </NavbarNav>
-        <NavbarNav position="right">
-          <NavbarItem>
-            <NavbarLink href="#">Deployment</NavbarLink>
-          </NavbarItem>
-          <NavbarItem>
-            <NavbarLink href="#">Basic Features</NavbarLink>
-          </NavbarItem>
-          <NavbarItem>
-            <NavbarLink href="#">Advanced Features</NavbarLink>
-          </NavbarItem>
-        </NavbarNav>
-      </NavbarCollapse>
+      <NavbarNav position="left">
+        <NavbarItem>
+          <NavbarLink href="#">Documentation</NavbarLink>
+        </NavbarItem>
+      </NavbarNav>
+      <NavbarNav position="right">
+        <NavbarItem>
+          <NavbarLink href="#">Deployment</NavbarLink>
+        </NavbarItem>
+        <NavbarItem>
+          <NavbarLink href="#">Basic Features</NavbarLink>
+        </NavbarItem>
+        <NavbarItem>
+          <NavbarLink href="#">Advanced Features</NavbarLink>
+        </NavbarItem>
+      </NavbarNav>
     </Navbar>
   </div>
 );

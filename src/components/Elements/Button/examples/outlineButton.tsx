@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '../../';
+import { Button } from '../..';
 
 const OutlineButtons = (): JSX.Element => (
   <div className="mb-12">

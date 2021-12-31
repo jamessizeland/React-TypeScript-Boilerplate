@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, MenuContainer, MenuItem, Button } from '../../';
+import { Menu, MenuContainer, MenuItem, Button } from '../..';
 
 const CurtainMenuLeft = (): JSX.Element => {
   const [open, setOpen] = useState<boolean>(false);

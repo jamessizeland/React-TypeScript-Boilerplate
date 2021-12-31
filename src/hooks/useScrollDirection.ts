@@ -10,13 +10,13 @@ type ScrollDir = 'up' | 'down';
 interface IScrollDir {
   initialDirection?: ScrollDir;
   thresholdPixels?: number;
-  watchScroll?: false;
+  watchScroll?: boolean;
 }
 
 const useScrollDirection = ({
   initialDirection = 'down',
   thresholdPixels = 0,
-  watchScroll = false,
+  watchScroll = true,
 }: IScrollDir) => {
   const [scrollDir, setScrollDir] = useState<ScrollDir>(initialDirection);
 
