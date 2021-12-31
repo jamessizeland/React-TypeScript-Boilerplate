@@ -6,7 +6,10 @@
   "description": "building a solid foundation for projects",
   "main": "src/index.tsx",
   "repository": "https://github.com/jamessizeland/React-Typescript-Boilerplate",
-  "author": {"name": "James Sizeland", "email": "jamessizeland@gmail.com"},
+  "author": {
+    "name": "James Sizeland",
+    "email": "jamessizeland@gmail.com"
+  },
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
@@ -70,6 +73,8 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.4.2",
+    "@nivo/core": "^0.76.0",
+    "@nivo/line": "^0.76.0",
     "@reach/portal": "^0.16.2",
     "@reduxjs/toolkit": "^1.7.1",
     "@storybook/react": "^6.4.9",

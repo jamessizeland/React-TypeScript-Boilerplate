@@ -1,3 +1,4 @@
+// Check if the app is being run from a specified environment, or just return the running environment (dev, prod, test)
 type Env = typeof process.env.NODE_ENV;
 
 export function checkEnv(): string;

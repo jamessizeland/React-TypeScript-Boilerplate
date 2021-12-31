@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { Provider } from 'react-redux';
 import { store } from 'Store/store';
 import { Layout } from 'Components';
@@ -17,6 +17,7 @@ ReactDOM.render(
     <HelmetProvider>
       <Provider store={store}>
         <BrowserRouter basename={pjson.homepage}>
+          <Helmet title={pjson.name} />
           <Layout>
             <AppRoutes />
           </Layout>
