@@ -1,5 +1,6 @@
 import React from 'react';
 import { routes } from 'Routes';
+import { NavbarLink, NavbarItem } from 'Components/Elements';
 
 const style = {
   link: `flex font-medium items-center justify-start my-1 p-3 text-sm w-full lg:hover:text-purple-800`,
@@ -11,13 +12,22 @@ const style = {
 const SidenavItems = () => {
   // const { asPath } = useRouter();
   return (
-    <li>
-      {routes.map(({ title, path }) => (
+    <ul>
+      {/* {routes.map(({ title, path }) => (
         <a href={path} key={title} className={style.link}>
           <span className="mx-4">{title}</span>
         </a>
-      ))}
-    </li>
+      ))} */}
+      {routes.map(({ title, path }) => {
+        return (
+          <NavbarItem key={title + path}>
+            <NavbarLink href={path}>
+              <span className="pl-1">{title}</span>
+            </NavbarLink>
+          </NavbarItem>
+        );
+      })}
+    </ul>
   );
 };
 

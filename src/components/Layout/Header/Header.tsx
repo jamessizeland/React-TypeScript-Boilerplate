@@ -7,7 +7,7 @@ import {
   NavbarToggler,
   NavbarLink,
   NavbarNav,
-} from '../../Elements';
+} from 'Components/Elements';
 import { useToggle } from '../helpers/context';
 import Logo from '../Logo';
 import { routes } from 'Routes';
@@ -32,21 +32,20 @@ function Header(): JSX.Element {
         'z fixed z-10 top-0 w-full font-inter bg-white lg:fixed lg:px-container',
       )}
     >
-      <Navbar className={clsx('text-white bg-primary')}>
+      <Navbar className={clsx('bg-primary')}>
         <NavbarBrand href="/">
           <Logo />
         </NavbarBrand>
         <NavbarNav position="right">
-          <NavbarItem>
-            <NavbarLink href="#">
-              <span className="pl-1">First Link</span>
-            </NavbarLink>
-          </NavbarItem>
-          <NavbarItem>
-            <NavbarLink href="#">
-              <span className="pl-1">Docs</span>
-            </NavbarLink>
-          </NavbarItem>
+          {routes.map(({ title, path }) => {
+            return (
+              <NavbarItem key={title + path}>
+                <NavbarLink href={path}>
+                  <span className="pl-1">{title}</span>
+                </NavbarLink>
+              </NavbarItem>
+            );
+          })}
         </NavbarNav>
         <NavbarToggler toggle={toggle} />
       </Navbar>

@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import React from 'react';
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
@@ -12,7 +13,7 @@ type LayoutProps = {
 export function Layout({ children }: LayoutProps): JSX.Element {
   return (
     <LayoutProvider>
-      <div className="flex font-body items-start">
+      <div className={clsx('bg-gray-400', 'flex font-body items-start')}>
         <Overlay />
         <Header />
         <SideNav />

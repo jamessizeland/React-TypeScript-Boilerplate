@@ -1,6 +1,6 @@
+// https://dev.to/fayaz/making-a-navigation-drawer-sliding-sidebar-with-tailwindcss-blueprint-581l
 import React from 'react';
 import SidenavItems from './items';
-import SidenavHeader from './header';
 import { useToggle } from '../helpers/context';
 import {
   Drawer,
@@ -8,6 +8,7 @@ import {
   DrawerBody,
   DrawerFooter,
 } from 'Components/Elements';
+import Logo from '../Logo';
 
 const SideNavigation = () => {
   const { open, toggle } = useToggle();
@@ -15,7 +16,8 @@ const SideNavigation = () => {
   return (
     <Drawer isOpen={open} toggle={toggle} position="right">
       <DrawerHeader>
-        <SidenavHeader />
+        <Logo className="inline mr-2" />
+        <p className="inline">Header</p>
       </DrawerHeader>
       <DrawerBody>
         <ul className="md:pl-6">

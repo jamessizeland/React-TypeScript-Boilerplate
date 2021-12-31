@@ -11,6 +11,7 @@ type RouteType = {
 
 const publicRoutes: RouteType[] = [
   { title: 'Home', path: '/', element: <HomePage /> },
+  { title: 'About', path: '/about', element: <HomePage /> },
 ];
 
 const devRoutes: RouteType[] = [

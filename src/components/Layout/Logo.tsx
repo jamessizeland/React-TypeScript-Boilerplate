@@ -1,15 +1,28 @@
 import React from 'react';
 import logo from 'Assets/logo.svg';
 
-const Logo = (): JSX.Element => {
+interface Props {
+  className?: string;
+  height?: number;
+  width?: number;
+  altText?: string;
+}
+
+const Logo = ({
+  className = '',
+  height = 50,
+  width = 50,
+  altText = 'logo',
+}: Props): JSX.Element => {
   return (
     <img
+      className={className}
       src={logo}
-      height={50}
-      width={50}
+      height={height}
+      width={width}
       placeholder="blur"
       // objectFit="cover"
-      alt="default logo"
+      alt={altText}
     />
   );
 };
