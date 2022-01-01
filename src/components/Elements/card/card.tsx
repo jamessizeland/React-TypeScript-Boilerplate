@@ -12,7 +12,7 @@ const inlineStyle = {
 
 function Card({ children, className }: Props) {
   return (
-    <div className={clsx(className, 'relative rounded-lg')} style={inlineStyle}>
+    <div className={clsx('relative rounded-lg', className)} style={inlineStyle}>
       {children}
     </div>
   );
@@ -20,7 +20,7 @@ function Card({ children, className }: Props) {
 
 function CardBody({ children, className }: Props) {
   return (
-    <div className={clsx(className, 'block flex-grow flex-shrink p-5')}>
+    <div className={clsx('block flex-grow flex-shrink p-5', className)}>
       {children}
     </div>
   );
@@ -28,14 +28,14 @@ function CardBody({ children, className }: Props) {
 
 function CardTitle({ children, className }: Props) {
   return (
-    <div className={clsx(className, 'font-medium text-gray-700 mb-3')}>
+    <div className={clsx('font-medium text-gray-700 mb-3', className)}>
       {children}
     </div>
   );
 }
 
 function CardText({ children, className }: Props) {
-  return <div className={clsx(className, 'text-gray-500')}>{children}</div>;
+  return <div className={clsx('text-gray-500', className)}>{children}</div>;
 }
 
 export { Card, CardBody, CardTitle, CardText };

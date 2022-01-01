@@ -37,7 +37,10 @@ const MultipleCard = (): JSX.Element => (
               Joe made the sugar cookies; Susan decorated them. When motorists
               sped in and out of traffic.
             </CardText>
-            <a className="inline-flex items-center mt-4 text-indigo-500 cursor-pointer">
+            <a
+              className="inline-flex items-center mt-4 text-indigo-500 cursor-pointer"
+              href="/#"
+            >
               View Details
               <ArrowIcon />
             </a>
@@ -59,7 +62,10 @@ const MultipleCard = (): JSX.Element => (
               Joe made the sugar cookies; Susan decorated them. When motorists
               sped in and out of traffic.
             </CardText>
-            <a className="inline-flex items-center mt-4 text-indigo-500 cursor-pointer">
+            <a
+              className="inline-flex items-center mt-4 text-indigo-500 cursor-pointer"
+              href="/#"
+            >
               View Details
               <ArrowIcon />
             </a>
@@ -81,7 +87,10 @@ const MultipleCard = (): JSX.Element => (
               Joe made the sugar cookies; Susan decorated them. When motorists
               sped in and out of traffic.
             </CardText>
-            <a className="inline-flex items-center mt-4 text-indigo-500 cursor-pointer">
+            <a
+              className="inline-flex items-center mt-4 text-indigo-500 cursor-pointer"
+              href="/#"
+            >
               View Details
               <ArrowIcon />
             </a>

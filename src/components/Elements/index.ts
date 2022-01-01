@@ -22,3 +22,4 @@ export * from './sidenav/sidenav';
 export * from './spinner/spinner';
 export * from './tooltip/tooltip';
 export * from './icon/icon';
+export * from './charts/ResponsiveLine';

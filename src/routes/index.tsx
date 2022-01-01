@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { HomePage } from 'Pages';
+import { HomePage, AboutPage, TestPage, DataPage } from 'Pages';
 import { checkEnv } from 'Utils';
 
 type RouteType = {
@@ -11,11 +11,12 @@ type RouteType = {
 
 const publicRoutes: RouteType[] = [
   { title: 'Home', path: '/', element: <HomePage /> },
-  { title: 'About', path: '/about', element: <HomePage /> },
+  { title: 'Data', path: '/data', element: <DataPage /> },
+  { title: 'About', path: '/about', element: <AboutPage /> },
 ];
 
 const devRoutes: RouteType[] = [
-  { title: 'Test', path: '/test', element: <></> },
+  { title: 'Test', path: '/test', element: <TestPage /> },
 ];
 
 export const routes: RouteType[] = checkEnv('development')

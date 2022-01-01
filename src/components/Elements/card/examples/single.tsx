@@ -9,7 +9,7 @@ const SingleCard = (): JSX.Element => (
     <Card className="w-full md:w-4/12">
       <img
         src="https://res.cloudinary.com/beloved/image/upload/v1608682938/Assets/632198_sgrp38.jpg"
-        alt="image"
+        alt="example"
         width={1200}
         height={600}
         className="max-w-full h-auto"
