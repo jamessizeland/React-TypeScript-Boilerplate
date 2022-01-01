@@ -9,8 +9,8 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        primary: '#84e1bc',
-        secondary: '#dcd7fe',
+        primary: '#0694a2',
+        secondary: '#9fa6b2',
         gray: {
           50: '#f9fafb',
           100: '#f4f5f7',

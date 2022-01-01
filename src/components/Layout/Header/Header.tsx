@@ -30,6 +30,7 @@ function Header(): JSX.Element {
         scrollDirection === 'up' ? 'translate-y-0' : '-translate-y-20',
         'transition ease-in-out duration-500',
         'z fixed z-10 top-0 w-full font-inter bg-white lg:fixed lg:px-container',
+        'shadow-lg shadow-slate-500',
       )}
     >
       <Navbar className={clsx('bg-primary')}>

@@ -13,7 +13,7 @@ type LayoutProps = {
 export function Layout({ children }: LayoutProps): JSX.Element {
   return (
     <LayoutProvider>
-      <div className={clsx('bg-gray-400', 'flex font-body items-start')}>
+      <div className={clsx('bg-gray-300', 'flex font-body items-start')}>
         <Overlay />
         <Header />
         <SideNav />
