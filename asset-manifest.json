@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-typescript-boilerplate/static/css/main.6e4e137a.css",
-    "main.js": "/react-typescript-boilerplate/static/js/main.1e7e1670.js",
-    "static/media/logo.svg": "/react-typescript-boilerplate/static/media/logo.314a949b75516e3aca4aeb6467362e8d.svg",
-    "index.html": "/react-typescript-boilerplate/index.html",
-    "main.6e4e137a.css.map": "/react-typescript-boilerplate/static/css/main.6e4e137a.css.map",
-    "main.1e7e1670.js.map": "/react-typescript-boilerplate/static/js/main.1e7e1670.js.map"
+    "main.css": "/React-Typescript-Boilerplate/static/css/main.6e4e137a.css",
+    "main.js": "/React-Typescript-Boilerplate/static/js/main.e8352a97.js",
+    "static/media/logo.svg": "/React-Typescript-Boilerplate/static/media/logo.314a949b75516e3aca4aeb6467362e8d.svg",
+    "index.html": "/React-Typescript-Boilerplate/index.html",
+    "main.6e4e137a.css.map": "/React-Typescript-Boilerplate/static/css/main.6e4e137a.css.map",
+    "main.e8352a97.js.map": "/React-Typescript-Boilerplate/static/js/main.e8352a97.js.map"
   },
   "entrypoints": [
     "static/css/main.6e4e137a.css",
-    "static/js/main.1e7e1670.js"
+    "static/js/main.e8352a97.js"
   ]
 }
