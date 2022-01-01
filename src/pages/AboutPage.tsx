@@ -1,8 +1,8 @@
 import React from 'react';
 
-const HomePage = () => (
+const AboutPage = () => (
   <div className="">
-    <h1 className="text-3xl font-bold underline text-center">Home Page</h1>
+    <h1 className="text-3xl font-bold underline text-center">About Page</h1>
     <br />
     <br />
     <br />
@@ -38,4 +38,4 @@ const HomePage = () => (
   </div>
 );
 
-export default HomePage;
+export default AboutPage;
